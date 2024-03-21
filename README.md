@@ -6,7 +6,9 @@
 payload = fmtstr_payload(6, {elf.got["exit"]: elf.symbols["win"]})
 ```
 
-Полный эксплойт: [expoit.py](pwn1/exploit.py)
+полный эксплойт: [expoit.py](pwn1/exploit.py)
+
+флаг: `nto{easy_formt_string}`
 
 
 #### pwn 2
@@ -21,7 +23,9 @@ info proc mappings # берем адресс первого исполняемо
 find <addr>, +0x1000, "/bin/bash"
 ```
 
-Полный эксплойт: [exploit.py](pwn2/exploit.py)
+полный эксплойт: [exploit.py](pwn2/exploit.py)
+
+флаг: `nto{sropsropsroplazy}`
 
 
 #### web 1
