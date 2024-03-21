@@ -22,3 +22,9 @@ find <addr>, +0x1000, "/bin/bash"
 ```
 
 Полный эксплойт: [exploit.py](pwn2/exploit.py)
+
+
+#### web 1
+простейшая lfi. в коде страницы видим ссылку вида `http://192.168.12.10:5001/download?file_type=file1.txt`. как раз в `file1.txt` написано, что флаг в `/etc/secret`. делаем запрос `http://192.168.12.10:5001/download?file_type=../../../../../../etc/secret`
+
+флаг: `nto{P6t9_T77v6RsA1}`
